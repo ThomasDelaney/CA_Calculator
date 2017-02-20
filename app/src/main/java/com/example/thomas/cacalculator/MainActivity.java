@@ -1,5 +1,6 @@
 package com.example.thomas.cacalculator;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -109,9 +110,16 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.item1)
+
+        switch (id)
         {
-            return true;
+            case R.id.item1:
+                Intent intent = new Intent(this, SecondActivity.class);
+                startActivity(intent);
+                return true;
+            case R.id.item2:
+                return true;
+            default:
         }
 
         return super.onOptionsItemSelected(item);

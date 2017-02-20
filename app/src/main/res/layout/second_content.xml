@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.thomas.cacalculator.SecondActivity"
+    tools:showIn="@layout/second_activity">
+
+    <TextView
+        android:text="%"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView5"
+        android:textSize="30sp"
+        android:textColor="@android:color/background_dark"
+        android:layout_marginRight="31dp"
+        android:layout_marginEnd="31dp"
+        android:layout_alignBaseline="@+id/firstPercent"
+        android:layout_alignBottom="@+id/firstPercent"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="%"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:textSize="30sp"
+        android:textColor="@android:color/background_dark"
+        android:layout_alignBaseline="@+id/secondPercent"
+        android:layout_alignBottom="@+id/secondPercent"
+        android:layout_alignLeft="@+id/textView5"
+        android:layout_alignStart="@+id/textView5" />
+
+    <TextView
+        android:text="From the Exam You Need:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        android:textStyle="normal|bold"
+        android:textAllCaps="true"
+        android:textAlignment="center"
+        android:layout_below="@+id/secondPercent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="37dp" />
+
+    <TextView
+        android:text="to Pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView17"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        android:layout_alignBottom="@+id/pass"
+        android:layout_alignLeft="@+id/textView18"
+        android:layout_alignStart="@+id/textView18" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/firstPercent"
+        android:textColor="?attr/colorControlNormal"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:inputType="numberDecimal"
+        android:hint="Enter"
+        android:text="0"
+        android:layout_alignBaseline="@+id/textView3"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_toRightOf="@+id/textView3"
+        android:layout_toEndOf="@+id/textView3"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/secondPercent"
+        android:textColor="?attr/colorControlNormal"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:inputType="numberDecimal"
+        android:hint="Enter"
+        android:text="0"
+        android:layout_alignBaseline="@+id/textView"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_alignLeft="@+id/firstPercent"
+        android:layout_alignStart="@+id/firstPercent" />
+
+    <TextView
+        android:text="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pass"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="30sp"
+        android:layout_marginTop="21dp"
+        android:layout_below="@+id/textView2"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2" />
+
+    <TextView
+        android:text="You have"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/twoTwo"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="30sp"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/pass"
+        android:layout_alignLeft="@+id/pass"
+        android:layout_alignStart="@+id/pass" />
+
+    <TextView
+        android:text="out of"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        android:layout_marginTop="65dp"
+        android:layout_below="@+id/firstPercent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/first"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="30sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/twoOne"
+        android:layout_alignStart="@+id/twoOne"
+        android:layout_marginBottom="15dp" />
+
+    <TextView
+        android:text="for a First"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView16"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        android:layout_alignBottom="@+id/first"
+        android:layout_alignLeft="@+id/textView19"
+        android:layout_alignStart="@+id/textView19" />
+
+    <TextView
+        android:text="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/twoOne"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="30sp"
+        android:layout_marginBottom="22dp"
+        android:layout_above="@+id/first"
+        android:layout_alignLeft="@+id/twoTwo"
+        android:layout_alignStart="@+id/twoTwo" />
+
+    <TextView
+        android:text="for a 2:1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView19"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        android:layout_alignBottom="@+id/twoOne"
+        android:layout_alignRight="@+id/textView4"
+        android:layout_alignEnd="@+id/textView4" />
+
+    <TextView
+        android:text="for a 2:2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView18"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        android:layout_alignBottom="@+id/twoTwo"
+        android:layout_alignLeft="@+id/textView19"
+        android:layout_alignStart="@+id/textView19" />
+
+    <TextView
+        android:text="cheg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/firstPercent"
+        android:layout_alignLeft="@+id/firstPercent"
+        android:layout_alignStart="@+id/firstPercent"
+        android:id="@+id/textView6" />
+
+</RelativeLayout>

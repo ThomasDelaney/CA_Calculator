@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.example.thomas.cacalculator.MainActivity">
+    tools:context="com.example.thomas.cacalculator.SecondActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -13,16 +13,16 @@
         android:theme="@style/AppTheme.AppBarOverlay">
 
         <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
+            android:id="@+id/toolbar2"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@android:color/holo_blue_light"
             app:popupTheme="@style/AppTheme.PopupOverlay"
-            app:title="You have X% out of Y% CA" />
+            app:title="Test was Worth X% of CA" />
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_main" />
+    <include layout="@layout/second_content" />
 
 
 </android.support.design.widget.CoordinatorLayout>
