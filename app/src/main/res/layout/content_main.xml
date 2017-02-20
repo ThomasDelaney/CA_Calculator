@@ -40,41 +40,6 @@
         android:layout_alignStart="@+id/textView5" />
 
     <TextView
-        android:text="0"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/first"
-        android:textColor="@android:color/holo_red_dark"
-        android:textSize="30sp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/twoOne"
-        android:layout_alignStart="@+id/twoOne" />
-
-    <TextView
-        android:text="You have"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView3"
-        android:textColor="@android:color/background_dark"
-        android:textSize="24sp"
-        android:layout_marginTop="29dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignLeft="@+id/textView"
-        android:layout_alignStart="@+id/textView" />
-
-    <TextView
-        android:text="out of"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView"
-        android:textColor="@android:color/background_dark"
-        android:textSize="24sp"
-        android:layout_below="@+id/firstPercent"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_alignStart="@+id/textView2"
-        android:layout_marginTop="65dp" />
-
-    <TextView
         android:text="From the Exam You Need:"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -87,17 +52,6 @@
         android:layout_below="@+id/secondPercent"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="37dp" />
-
-    <TextView
-        android:text="for a First"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView16"
-        android:textColor="@android:color/background_dark"
-        android:textSize="24sp"
-        android:layout_alignTop="@+id/first"
-        android:layout_alignLeft="@+id/textView19"
-        android:layout_alignStart="@+id/textView19" />
 
     <TextView
         android:text="to Pass"
@@ -145,31 +99,6 @@
         android:layout_alignStart="@+id/firstPercent" />
 
     <TextView
-        android:text="for a 2:1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView19"
-        android:textColor="@android:color/background_dark"
-        android:textSize="24sp"
-        android:layout_alignTop="@+id/twoOne"
-        android:layout_alignLeft="@+id/textView18"
-        android:layout_alignStart="@+id/textView18" />
-
-    <TextView
-        android:text="for a 2:2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView18"
-        android:textColor="@android:color/background_dark"
-        android:textSize="24sp"
-        android:layout_marginRight="12dp"
-        android:layout_marginEnd="12dp"
-        android:layout_alignBaseline="@+id/twoTwo"
-        android:layout_alignBottom="@+id/twoTwo"
-        android:layout_toLeftOf="@+id/textView4"
-        android:layout_toStartOf="@+id/textView4" />
-
-    <TextView
         android:text="0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -182,16 +111,15 @@
         android:layout_alignStart="@+id/textView2" />
 
     <TextView
-        android:text="0"
+        android:text="You have"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/twoOne"
-        android:textColor="@android:color/holo_red_dark"
-        android:textSize="30sp"
-        android:layout_marginBottom="12dp"
-        android:layout_above="@+id/first"
-        android:layout_alignLeft="@+id/twoTwo"
-        android:layout_alignStart="@+id/twoTwo" />
+        android:id="@+id/textView3"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:text="0"
@@ -200,9 +128,78 @@
         android:id="@+id/twoTwo"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="30sp"
-        android:layout_marginBottom="16dp"
-        android:layout_above="@+id/twoOne"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/pass"
         android:layout_alignLeft="@+id/pass"
         android:layout_alignStart="@+id/pass" />
+
+    <TextView
+        android:text="out of"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        android:layout_marginTop="65dp"
+        android:layout_below="@+id/firstPercent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/first"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="30sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/twoOne"
+        android:layout_alignStart="@+id/twoOne"
+        android:layout_marginBottom="15dp" />
+
+    <TextView
+        android:text="for a First"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView16"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        android:layout_alignBottom="@+id/first"
+        android:layout_alignLeft="@+id/textView19"
+        android:layout_alignStart="@+id/textView19" />
+
+    <TextView
+        android:text="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/twoOne"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="30sp"
+        android:layout_marginBottom="22dp"
+        android:layout_above="@+id/first"
+        android:layout_alignLeft="@+id/twoTwo"
+        android:layout_alignStart="@+id/twoTwo" />
+
+    <TextView
+        android:text="for a 2:1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView19"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        android:layout_alignBottom="@+id/twoOne"
+        android:layout_alignRight="@+id/textView4"
+        android:layout_alignEnd="@+id/textView4" />
+
+    <TextView
+        android:text="for a 2:2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView18"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        android:layout_alignBottom="@+id/twoTwo"
+        android:layout_alignLeft="@+id/textView19"
+        android:layout_alignStart="@+id/textView19" />
 
 </RelativeLayout>

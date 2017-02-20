@@ -139,10 +139,41 @@ public class MainActivity extends AppCompatActivity
             toTwoOne = (needTwoOne/examTotal)*100;
             toFirst = (needFirst/examTotal)*100;
 
-            pass.setText(String.valueOf(Math.round(toPass*100.0)/100.0)+"%");
-            twotwo.setText(String.valueOf(Math.round(toTwoTwo*100.0)/100.0)+"%");
-            twoone.setText(String.valueOf(Math.round(toTwoOne*100.0)/100.0)+"%");
-            first.setText(String.valueOf(Math.round(toFirst*100.0)/100.0)+"%");
+            if (toPass <= 100)
+            {
+                pass.setText(String.valueOf(Math.round(toPass * 100.0) / 100.0) + "%");
+            }
+            else
+            {
+                pass.setText("Not Possible");
+            }
+
+            if (toTwoTwo <= 100)
+            {
+                twotwo.setText(String.valueOf(Math.round(toTwoTwo * 100.0) / 100.0) + "%");
+            }
+            else
+            {
+                twotwo.setText("Not Possible");
+            }
+
+            if (toTwoOne <= 100)
+            {
+                twoone.setText(String.valueOf(Math.round(toTwoOne * 100.0) / 100.0) + "%");
+            }
+            else
+            {
+                twoone.setText("Not Possible");
+            }
+
+            if (toFirst <= 100)
+            {
+                first.setText(String.valueOf(Math.round(toFirst * 100.0) / 100.0) + "%");
+            }
+            else
+            {
+                first.setText("Not Possible");
+            }
         }
     }
 }
