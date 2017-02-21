@@ -15,25 +15,29 @@ import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class SecondActivity extends AppCompatActivity
+public class ThirdActivity extends AppCompatActivity
 {
+    EditText firstMark;
+    EditText secondMark;
     EditText firstPercent;
-    EditText secondPercent;
 
     TextView answer;
 
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.second_activity);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar2);
+        setContentView(R.layout.third_activity);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar3);
         setSupportActionBar(toolbar);
 
-        firstPercent = (EditText) findViewById(R.id.firstMark);
-        firstPercent.setFilters(new InputFilter[] { new InputFilter.LengthFilter(2)});
+        firstMark = (EditText) findViewById(R.id.firstMark);
+        firstMark.setFilters(new InputFilter[] { new InputFilter.LengthFilter(3)});
 
-        secondPercent = (EditText) findViewById(R.id.secondMark);
-        secondPercent.setFilters(new InputFilter[] { new InputFilter.LengthFilter(2)});
+        secondMark = (EditText) findViewById(R.id.secondMark);
+        secondMark.setFilters(new InputFilter[] { new InputFilter.LengthFilter(3)});
+
+        firstPercent = (EditText) findViewById(R.id.firstPercent);
+        firstPercent.setFilters(new InputFilter[] { new InputFilter.LengthFilter(2)});
 
         firstPercent.addTextChangedListener(new TextWatcher()
         {
@@ -44,7 +48,9 @@ public class SecondActivity extends AppCompatActivity
 
             public void onTextChanged(CharSequence s, int start, int before, int count)
             {
-                if (!String.valueOf(firstPercent.getText()).equals("") && !String.valueOf(secondPercent.getText()).equals("") && !String.valueOf(firstPercent.getText()).equals(".") && !String.valueOf(secondPercent.getText()).equals("."))
+                if (!String.valueOf(firstPercent.getText()).equals("") && !String.valueOf(firstPercent.getText()).equals(".") &&
+                        !String.valueOf(firstMark.getText()).equals("") && !String.valueOf(secondMark.getText()).equals("") &&
+                        !String.valueOf(firstMark.getText()).equals(".") && !String.valueOf(secondMark.getText()).equals("."))
                 {
                     calculate();
                 }
@@ -56,7 +62,7 @@ public class SecondActivity extends AppCompatActivity
             }
         });
 
-        secondPercent.addTextChangedListener(new TextWatcher()
+        firstMark.addTextChangedListener(new TextWatcher()
         {
             public void beforeTextChanged(CharSequence s, int start, int count, int after)
             {
@@ -65,7 +71,32 @@ public class SecondActivity extends AppCompatActivity
 
             public void onTextChanged(CharSequence s, int start, int before, int count)
             {
-                if (!String.valueOf(firstPercent.getText()).equals("") && !String.valueOf(secondPercent.getText()).equals("") && !String.valueOf(firstPercent.getText()).equals(".") && !String.valueOf(secondPercent.getText()).equals("."))
+                if (!String.valueOf(firstPercent.getText()).equals("") && !String.valueOf(firstPercent.getText()).equals(".") &&
+                        !String.valueOf(firstMark.getText()).equals("") && !String.valueOf(secondMark.getText()).equals("") &&
+                        !String.valueOf(firstMark.getText()).equals(".") && !String.valueOf(secondMark.getText()).equals("."))
+                {
+                    calculate();
+                }
+            }
+
+            public void afterTextChanged(Editable s)
+            {
+                // TODO Auto-generated method stub
+            }
+        });
+
+        secondMark.addTextChangedListener(new TextWatcher()
+        {
+            public void beforeTextChanged(CharSequence s, int start, int count, int after)
+            {
+                // TODO Auto-generated method stub
+            }
+
+            public void onTextChanged(CharSequence s, int start, int before, int count)
+            {
+                if (!String.valueOf(firstPercent.getText()).equals("") && !String.valueOf(firstPercent.getText()).equals(".") &&
+                        !String.valueOf(firstMark.getText()).equals("") && !String.valueOf(secondMark.getText()).equals("") &&
+                        !String.valueOf(firstMark.getText()).equals(".") && !String.valueOf(secondMark.getText()).equals("."))
                 {
                     calculate();
                 }
@@ -82,7 +113,7 @@ public class SecondActivity extends AppCompatActivity
     public boolean onCreateOptionsMenu(Menu menu)
     {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main2, menu);
+        getMenuInflater().inflate(R.menu.menu_main3, menu);
         return true;
     }
 
@@ -103,7 +134,7 @@ public class SecondActivity extends AppCompatActivity
                 startActivity(intent);
                 return true;
             case R.id.item2:
-                Intent intent2 = new Intent(this, ThirdActivity.class);
+                Intent intent2 = new Intent(this, SecondActivity.class);
                 startActivity(intent2);
                 return true;
             default:
@@ -118,9 +149,9 @@ public class SecondActivity extends AppCompatActivity
 
         answer = (TextView) findViewById(R.id.answer);
 
-        float result = (Float.parseFloat(String.valueOf(firstPercent.getText())) / 100) * Float.parseFloat(String.valueOf(secondPercent.getText()));
+        float result = (Float.parseFloat(String.valueOf(firstMark.getText())) / Float.parseFloat(String.valueOf(secondMark.getText()))) * Float.parseFloat(String.valueOf(firstPercent.getText()));
 
-        if (Float.parseFloat(String.valueOf(firstPercent.getText())) > Float.parseFloat(String.valueOf(secondPercent.getText())))
+        if (Float.parseFloat(String.valueOf(firstMark.getText())) > Float.parseFloat(String.valueOf(secondMark.getText())))
         {
             possible = false;
         }
