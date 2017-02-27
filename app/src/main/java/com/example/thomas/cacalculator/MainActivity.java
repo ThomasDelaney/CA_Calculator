@@ -158,7 +158,7 @@ public class MainActivity extends AppCompatActivity
         {
             pass.setText(String.valueOf(Math.round(toPass * 100.0) / 100.0) + "%");
         }
-        else if (toPass <= 0)
+        else if (toPass <= 0 && possible)
         {
             pass.setText("Achieved");
         }
@@ -171,7 +171,7 @@ public class MainActivity extends AppCompatActivity
         {
             twotwo.setText(String.valueOf(Math.round(toTwoTwo * 100.0) / 100.0) + "%");
         }
-        else if (toTwoTwo <= 0)
+        else if (toTwoTwo <= 0 && possible)
         {
             twotwo.setText("Achieved");
         }
@@ -184,7 +184,7 @@ public class MainActivity extends AppCompatActivity
         {
             twoone.setText(String.valueOf(Math.round(toTwoOne * 100.0) / 100.0) + "%");
         }
-        else if (toTwoOne <= 0)
+        else if (toTwoOne <= 0 && possible)
         {
             twotwo.setText("Achieved");
         }
@@ -197,7 +197,7 @@ public class MainActivity extends AppCompatActivity
         {
             first.setText(String.valueOf(Math.round(toFirst * 100.0) / 100.0) + "%");
         }
-        else if (toFirst <= 0)
+        else if (toFirst <= 0 && possible)
         {
             first.setText("Achieved");
         }
